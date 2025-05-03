@@ -1,0 +1,393 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header h1 {
+    font-size: 2.5em;  /* Adjust the font size to fit well */
+    margin-right: 40px;
+    margin-top: 30px;  /* Space between the header name and navigation */
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;  /* Increased margin for more spacing between links */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;  /* Slightly larger font size for better readability */
+    padding: 12px 25px; /* Larger padding to make the links appear more like buttons */
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.052); /* Soft background */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition for box-shadow */
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.409);
+    transform: scale(1.1);
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Add a subtle shadow on hover */
+}
+
+/* Focus state */
+nav ul li a:focus {
+    outline: none;
+}
+
+/* Optional: Adding media queries for responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Home Section */
+#home {
+    background: rgba(0, 0, 0, 0.612); /* Transparent background with slight dark tint */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Intro Box - no separate box, just content */
+.intro-box {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff; /* White text color for contrast */
+}
+
+/* Content Left */
+.content-left {
+    flex: 1;
+}
+
+.content-left h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content-left p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.602);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.213);
+}
+
+.resume-btn {
+    background-color: rgba(0, 0, 0, 0.602);
+}
+
+.resume-btn:hover {
+    background-color: rgba(0, 0, 0, 0.213);
+}
+
+/* Profile Image */
+.content-right {
+    position: absolute;
+    top: 110px; /* Adjust if needed */
+    right: 150px; /* Positioned in the top-right corner */
+    width: 150px; /* Adjust image size */
+}
+
+.profile-image {
+    width: 250px;  /* Increase the size of the circle */
+    height: 250px; /* Same as width to keep it circular */
+    border-radius: 50%; /* Keeps the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+    #home {
+        text-align: center;
+    }
+
+    .intro-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-left {
+        margin-bottom: 20px;
+    }
+
+    .content-right {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+    }
+}
+
+
+
+/* About Section */
+/* About Section - Full Page, No White Background, No Box */
+#about {
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.6); /* Optional dark overlay background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Projects Section */
+#projects {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #fff;
+  }
+  
+  /* Grid Layout */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Project Card */
+  .project {
+    background-color: #ffffffde;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Project Content */
+  .project h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .project ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .project a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .project a:hover {
+    color: #ffd700;
+  }
+  
+  /* GitHub Button */
+  .github-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .github-btn a.btn {
+    padding: 8px 16px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .github-btn a.btn:hover {
+    background-color: #444;
+}
+  
+
+/* Contact Section */
+#contact {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 0;
+    text-align: center;
+    height: 100vh; /* Make the section take up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#contact ul li {
+    font-size: 1.2em;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+#contact ul li a {
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact ul li a:hover {
+    color: #ffffffa8;
+    transform: translateY(-5px);
+}
+
+#contact ul li a i {
+    margin-right: 10px;
+    font-size: 1.6em;
+    transition: transform 0.3s ease;
+}
+
+#contact ul li a:hover i {
+    transform: scale(1.2);
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
